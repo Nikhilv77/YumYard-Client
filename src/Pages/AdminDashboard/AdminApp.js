@@ -64,7 +64,7 @@ function App({handleAdminDashboardClick}) {
       <Sidebar openSidebarToggle={openSidebarToggle} OpenSidebar={OpenSidebar}/>
       
       <Routes>
-        <Route path = '' element = {<Home></Home>}></Route>
+        <Route path = '' element = {<AdminUsers></AdminUsers>}></Route>
         <Route path = 'customers' element = {<AdminUsers></AdminUsers>}></Route>
         <Route path = 'orders' element = {<AdminOrders></AdminOrders>}></Route>
         <Route path = 'contacts' element = {<AdminContacts></AdminContacts>}></Route>
