@@ -3,7 +3,7 @@ export const getAllPizzas = ()=>async (dispatch) => {
   dispatch({ type: "REQUEST" });
   try {
     const response = await axios.get("https://yumyard-server.onrender.com/api/pizzas/getallpizzas");
-    // console.log(response.data);
+    console.log(response.data,"after home.js");
     dispatch({ type: "SUCCESS", payload: response.data });
   } catch (err) {
     dispatch({ type: "FAILED", payload: err });
