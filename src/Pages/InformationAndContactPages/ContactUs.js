@@ -28,7 +28,7 @@ const ContactUs = () => {
     }
     let data;
     try {
-      const response = await axios.post('/api/users/doescontactexist',{value});
+      const response = await axios.post('https://yumyard-server.onrender.com/api/users/doescontactexist',{value});
       data = {...value,isCustomer:true}
       console.log(data);
       dispatch(submitContactActions(data))

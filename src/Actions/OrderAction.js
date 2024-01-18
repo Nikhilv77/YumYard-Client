@@ -8,7 +8,7 @@ export const orderAction = (body) => async (dispatch) => {
   console.log(body);
 
   try {
-    const response = await axios.post("/api/orders/placeorder",body);
+    const response = await axios.post("https://yumyard-server.onrender.com/api/orders/placeorder",body);
     dispatch({ type: "ORDER_SUCCESSFULL" });
     const sessionId = response.data.id;
 
@@ -27,7 +27,7 @@ export const getUserOrders = ()=>async(dispatch,getState)=>{
     const currUserEmail= getState().login.currUser.email;
     dispatch({type:'GET_USER_ORDERS_REQUEST'})
     try{
-      const response = await axios.post('api/orders/getUserOrders',{currUserEmail:currUserEmail});
+      const response = await axios.post('https://yumyard-server.onrender.com/api/orders/getUserOrders',{currUserEmail:currUserEmail});
       // console.log(response.data,'coming from actions');
       dispatch({type:"GET_USER_ORDERS_SUCCESS",payload:response.data})
     }catch(error){

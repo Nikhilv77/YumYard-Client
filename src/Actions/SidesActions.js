@@ -3,7 +3,7 @@ import axios from "axios";
 export const getAllSidesAction = ()=>async(dispatch)=>{
 dispatch({type:'GET_ALL_SIDES_REQUEST'})
 try {
-    const response = await axios.get('/api/sides/getallsides')
+    const response = await axios.get('https://yumyard-server.onrender.com/api/sides/getallsides')
     console.log(response.data);
     dispatch({type:'GET_ALL_SIDES_SUCCESSFUL',payload:response.data})
 } catch (error) {
@@ -14,7 +14,7 @@ export const getFilteredSides = (searchValue, category) => async (dispatch) => {
     dispatch({ type: "GET_ALL_SIDES_REQUEST" });
     let filteredSides;
     try {
-      const response = await axios.get("/api/sides/getallsides");
+      const response = await axios.get("https://yumyard-server.onrender.com/api/sides/getallsides");
       filteredSides = response.data.filter((sides) =>
         sides.name.toLowerCase().includes(searchValue.toLowerCase())
       );
@@ -31,7 +31,7 @@ export const getFilteredSides = (searchValue, category) => async (dispatch) => {
   export const deleteSides = (productId)=>async(dispatch)=>{
     dispatch({type:'DELETE_SIDE_REQUEST'});
     try{
-      const response = await axios.post('/api/sides/deleteside',{productId});
+      const response = await axios.post('https://yumyard-server.onrender.com/api/sides/deleteside',{productId});
       dispatch({type:'DELETE_SIDE_SUCCESS'})
     }catch(error){
       dispatch({type:'DELETE_SIDE_FAILED',payload:error});
@@ -41,7 +41,7 @@ export const getFilteredSides = (searchValue, category) => async (dispatch) => {
   export const addSide = (product)=>async (dispatch)=>{
     dispatch({type:'ADD_SIDE_REQUEST'})
     try{
-    const response = await axios.post('/api/sides/addnewside',{product})
+    const response = await axios.post('https://yumyard-server.onrender.com/api/sides/addnewside',{product})
     dispatch({type:'ADD_SIDE_SUCCESS'})
     }catch(error){
     dispatch ({type:'ADD_SIDE_FAILED',payload:error})
@@ -51,7 +51,7 @@ export const getFilteredSides = (searchValue, category) => async (dispatch) => {
     export const getSideByIdAction  = (productId)=>async(dispatch)=>{
       dispatch({type:'GET_SIDE_BYID_REQUEST'})
       try{
-      const response = await axios.post('/api/sides/getbyid',{productId});
+      const response = await axios.post('https://yumyard-server.onrender.com/api/sides/getbyid',{productId});
       dispatch({type:'GET_SIDE_BYID_SUCCESS',payload:response.data})
       }catch(error){
       dispatch({type:'GET_SIDE_BYID_FAILED',payload:error})
@@ -61,7 +61,7 @@ export const getFilteredSides = (searchValue, category) => async (dispatch) => {
     export const editSide = (product)=>async (dispatch)=>{
       dispatch({type:'EDIT_SIDE_REQUEST'})
       try{
-      const response = await axios.post('/api/sides/editside',{product})
+      const response = await axios.post('https://yumyard-server.onrender.com/api/sides/editside',{product})
       dispatch({type:'EDIT_SIDE_SUCCESS'})
       }catch(error){
       dispatch ({type:'EDIT_SIDE_FAILED',payload:error})
