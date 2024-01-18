@@ -32,6 +32,7 @@ import { getAllBevaragesAction } from "../../Actions/BevarageActions";
 import { getAllDonations } from "../../Actions/DonationActions";
 
 function Home() {
+  console.log(" home js -logged");
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getAllBurgersAction());
