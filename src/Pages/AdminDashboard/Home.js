@@ -172,7 +172,7 @@ console.log(restaurantData,"data from homejs")
   }
 
   // Colors for the pie chart
-  else
+  else if(!orderLoading && !userLoading && !feedbackLoading && !donationLoading && !contactLoading && !pizzaLoading && !burgerLoading &&!mealLoading && !loadingError && !sideLoading)
 {
   return (
     <main className="main-container">
