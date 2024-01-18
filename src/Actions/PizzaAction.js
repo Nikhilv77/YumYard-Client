@@ -2,7 +2,7 @@ import axios from "axios";
 export const getAllPizzas = ()=>async (dispatch) => {
   dispatch({ type: "REQUEST" });
   try {
-    const response = await axios.get("/api/pizzas/getallpizzas");
+    const response = await axios.get("https://yumyard-server.onrender.com/api/pizzas/getallpizzas");
     // console.log(response.data);
     dispatch({ type: "SUCCESS", payload: response.data });
   } catch (err) {
@@ -14,7 +14,7 @@ export const getFilteredPizzas = (searchValue, category) => async (dispatch) => 
   dispatch({ type: "REQUEST" });
   let filteredPizzas;
   try {
-    const response = await axios.get("/api/pizzas/getallpizzas");
+    const response = await axios.get("https://yumyard-server.onrender.com/api/pizzas/getallpizzas");
     filteredPizzas = response.data.filter((pizza) =>
       pizza.name.toLowerCase().includes(searchValue.toLowerCase())
     );
