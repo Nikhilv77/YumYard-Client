@@ -20,7 +20,6 @@ import NewsPage from '../../Components/News'
 import { useSelector } from 'react-redux'
 
 function App({handleAdminDashboardClick}) {
-  console.log("from admin-app");
 
   const{currUser} = useSelector(state=>state.login)
   const navigate = useNavigate()
@@ -58,7 +57,6 @@ function App({handleAdminDashboardClick}) {
       return
     }
   }
-  console.log("admin-dashboard end");
   return (
     <div className='grid-container'>
 
