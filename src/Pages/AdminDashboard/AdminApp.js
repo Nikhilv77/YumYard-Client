@@ -20,6 +20,7 @@ import NewsPage from '../../Components/News'
 import { useSelector } from 'react-redux'
 
 function App({handleAdminDashboardClick}) {
+  console.log("from adminapp")
 
   const{currUser} = useSelector(state=>state.login)
   const navigate = useNavigate()
