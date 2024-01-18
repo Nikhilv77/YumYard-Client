@@ -30,7 +30,8 @@ import { getAllUsers } from "../../Actions/UserRegActions";
 import { getAllPizzas } from "../../Actions/PizzaAction";
 import { getAllBevaragesAction } from "../../Actions/BevarageActions";
 import { getAllDonations } from "../../Actions/DonationActions";
-
+import ClipLoader from "react-spinners/ClipLoader";
+import { Alert } from "react-bootstrap";
 function Home() {
   console.log(" home js -logged");
   const dispatch = useDispatch();
@@ -142,6 +143,29 @@ function Home() {
     stars: `${index + 1}⭐`,
     count,
   }));
+  if (orderLoading || userLoading || feedbackLoading || donationLoading || contactLoading || pizzaLoading || burgerLoading || mealLoading || loadingError || sideLoading) {
+    return (
+      <div className="card-container">
+        <div
+          style={{ display: "flex", height: "88vh", justifyContent: "center" }}
+          className="card"
+        >
+          <ClipLoader className="m-auto" size={60}></ClipLoader>
+        </div>
+      </div>
+    );
+  }
+  
+  // Add a check for error state before rendering the component
+  if (orderError || userError || feedbackError || donationError || contactError || pizzaError || burgerError || mealError || bevarageError || sideError) {
+    return (
+      <div className="card-container">
+        <div style={{ display: "flex", height: "85vh", justifyContent: "center" }} className="card">
+          <Alert className="m-auto"  style={{maxWidth:'300px'}} variant="danger">Something went wrong!</Alert>
+        </div>
+      </div>
+    );
+  }
 
   // Colors for the pie chart
   const COLORS = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042", "red"];
