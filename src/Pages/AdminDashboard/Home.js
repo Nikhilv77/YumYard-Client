@@ -149,10 +149,10 @@ console.log(restaurantData,"data from homejs")
   const COLORS = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042", "red"];
   if (orderLoading || userLoading || feedbackLoading || donationLoading || contactLoading || pizzaLoading || burgerLoading || mealLoading || loadingError || sideLoading) {
     return (
-      <div className="card-container">
+      <div>
         <div
           style={{ display: "flex", height: "88vh", justifyContent: "center" }}
-          className="card"
+          
         >
           <ClipLoader className="m-auto" size={60}></ClipLoader>
         </div>
@@ -163,8 +163,8 @@ console.log(restaurantData,"data from homejs")
   // Add a check for error state before rendering the component
  else if (orderError || userError || feedbackError || donationError || contactError || pizzaError || burgerError || mealError || bevarageError || sideError) {
     return (
-      <div className="card-container">
-        <div style={{ display: "flex", height: "85vh", justifyContent: "center" }} className="card">
+      <div >
+        <div style={{ display: "flex", height: "85vh", justifyContent: "center" }}>
           <Alert className="m-auto"  style={{maxWidth:'300px'}} variant="danger">Something went wrong!</Alert>
         </div>
       </div>
