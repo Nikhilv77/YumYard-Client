@@ -90,6 +90,9 @@ function Home() {
   const SidesState = useSelector((state) => state.Sides);
   const { Sides, error: sideError, loading: sideLoading } = SidesState;
 
+  console.log(Sides,"coming from homejs")
+  console.log(Bevarages,"coming from homejs")
+
   const donationAmountArray = Donations.map(
     (donation) => donation.donationAmount
   );
