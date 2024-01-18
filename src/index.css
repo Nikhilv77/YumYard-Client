@@ -1,0 +1,349 @@
+@import url("https://fonts.googleapis.com/css2?family=Autour+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+body {
+  background-color: #d3d3d3 !important;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.btn {
+  background-color: #2c3539 !important;
+  color: white !important;
+  box-shadow: "5px 10px 10px " !important;
+  border: 2px solid black !important;
+}
+
+.btn:hover {
+  background-color: #f6be00 !important; /* Change the background color on hover */
+  color: white !important; /* Change the text color on hover */
+}
+
+select {
+  box-shadow: none !important;
+  border-color: black !important;
+}
+.fa-plus {
+  color: grey;
+  margin: "20px";
+}
+.fa-minus {
+  color: grey;
+  margin: "20px";
+}
+
+.search-input {
+  color: #333 !important; /* Change the text color */
+  background-color: white !important; /* Change the background color */
+  border: 1px solid black !important; /* Change the border color */
+  border-radius: 5px !important; /* Add some border radius */
+  padding: 5px !important; /* Add some padding */
+}
+
+.search-input:focus {
+  outline: none !important; /* Remove the default outline */
+  border-color: #333 !important; /* Change the border color */
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1) !important; /* Add some inner shadow */
+}
+
+.search-input:hover {
+  background-color: #e0e0e0 !important; /* Change the background color */
+}
+.adminUtilities {
+  padding: 20px !important;
+  background-color: #8b0000 !important;
+  color: "#3A3B3C" !important;
+}
+
+.adminUtilities li {
+  list-style-type: none !important;
+  display: inline-block !important;
+  margin-right: 10px; /* Adjust margin as needed for spacing between buttons */
+}
+
+.adminUtilities li a {
+  text-decoration: none !important;
+  color: "#3A3B3C" !important;
+  padding: 10px 20px !important;
+  border-radius: 5px !important;
+  display: block !important;
+  /* Make the entire area clickable */
+  transition: background-color 0.3s ease, color 0.3s ease !important;
+}
+
+.adminUtilities li a:hover {
+  background-color: grey !important; /* Change the background color on hover */
+  color: white !important; /* Change the text color on hover */
+}
+
+/* Focus styles for links */
+.adminUtilities li a:focus {
+  background-color: grey !important;
+  outline: none !important; /* Remove default outline on focus */
+  box-shadow: 0 0 5px grey !important; /* Add a subtle box shadow on focus */
+}
+
+.labelStyle {
+  color: white !important;
+  width: 200px;
+  background-color: #8b0000 !important;
+  border-radius: 10px !important;
+  padding: 5px 10px !important;
+  margin-right: 10px !important;
+}
+
+.product-input {
+  color: #333 !important; /* Change the text color */
+  background-color: white !important; /* Change the background color */
+  border: 2px solid black !important; /* Change the border color */
+  border-radius: 5px !important; /* Add some border radius */
+  padding: 5px !important; /* Add some padding */
+  margin-left: 40px !important;
+  width: 600px !important;
+}
+
+/* Add this CSS to your stylesheet */
+.cancel {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 15px;
+  font-size: 17px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid black;
+  border-radius: 5px;
+  color: #3a3b3c;
+  background-color: #ffc000;
+  transition: background-color 0.3s, color 0.3s;
+  box-shadow: 5px 5px 15px;
+}
+
+.cancel:hover {
+  background-color: grey;
+}
+
+.confirmation-dialog {
+  border: 1px solid #ccc;
+  color: "#333";
+  padding: 20px;
+  text-align: center;
+}
+
+.button-container {
+  margin-top: 10px;
+}
+
+.yes-button,
+.no-button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.yes-button {
+  background-color: #4caf50;
+  color: #fff;
+}
+
+.no-button {
+  background-color: #f44336;
+  color: #fff;
+}
+
+.na {
+  background-color: #333;
+  padding: 15px;
+  color: white;
+  text-align: center;
+}
+
+/* Styling for the logo */
+.logo {
+  width: 50px; /* Adjust as needed */
+  height: auto; /* Maintain aspect ratio */
+  display: inline-block;
+}
+
+.status-icon {
+  display: inline-block;
+  padding: 5px 10px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.delivered {
+  background-color: #009150; /* or any color you prefer for delivered status */
+}
+
+.processing {
+  background-color: #8b0000; /* or any color you prefer for processing status */
+}
+.cancelled{
+  background-color: #8b0000 !important; /* or any color you prefer for processing status */
+}
+
+.map-container {
+  height: 400px;
+}
+
+.shopping-cart-favorites {
+  color: #0b6623;
+}
+.shopping-cart-favorites:hover {
+  color: #ffef00;
+}
+.plus-icon:hover {
+  color: green; /* Change to your desired color on hover */
+}
+
+.edit-icon:hover {
+  color: blue; /* Change to your desired color on hover */
+}
+
+.trash-icon:hover {
+  color: red; /* Change to your desired color on hover */
+}
+
+.blog-card {
+  margin: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 8px 16px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.blog-card:hover {
+  transform: scale(1.02);
+}
+.product-card {
+  transition: transform 0.3s ease-in-out;
+}
+.product-card:hover {
+  transform: scale(1.02);
+}
+
+.slide-enter {
+  opacity: 0;
+  transform: translateY(-100%);
+}
+
+.slide-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 700ms, transform 700ms;
+}
+
+.slide-exit {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.slide-exit-active {
+  opacity: 0;
+  transform: translateX(100%);
+  transition: opacity 500ms, transform 500ms;
+}
+
+.slideY-enter {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+
+.slideY-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 1000ms, transform 1000ms;
+}
+
+.slideY-exit {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.slideY-exit-active {
+  opacity: 0;
+  transform: translateX(100%);
+  transition: opacity 1000ms, transform 1000ms;
+}
+
+
+.slideLess-enter {
+  opacity: 0;
+  transform: translateY(-20%);
+}
+
+.slideLess-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 700ms, transform 700ms;
+}
+
+.slideLess-exit {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.slideLess-exit-active {
+  opacity: 0;
+  transform: translateX(100%);
+  transition: opacity 500ms, transform 500ms;
+}
+
+
+
+
+.fade-enter {
+  opacity: 0;
+  transform: translateX(-5%);
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 700ms, transform 700ms;
+}
+
+.fade-exit {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transform: translateX(5%);
+  transition: opacity 500ms, transform 500ms;
+}
+
+.button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.clicked {
+  animation: scaleAnimation 0.3s ease;
+}
+
+@keyframes scaleAnimation {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+
+.dropdown-item {
+  transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1),
+              opacity 0.3s cubic-bezier(0.25, 0.1, 0.25, 1); /* Smooth transition for transform and opacity */
+
+  opacity: 0.8; /* Initial opacity, adjust as needed */
+}
+
+.dropdown-item:hover {
+  transform: translateX(3px); /* Adjust translation as needed */
+  opacity: 1;
+}

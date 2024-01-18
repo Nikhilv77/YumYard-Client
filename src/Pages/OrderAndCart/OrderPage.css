@@ -1,0 +1,12 @@
+.order-card{
+    max-width: 90%;
+    margin: auto;
+    border-radius: 10px;
+    background-color: #787878;
+    font-family: 'Times Roman';
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+}
+.order-card:hover{
+    transform: scale(1.02);
+}

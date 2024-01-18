@@ -1,0 +1,63 @@
+/* ProductSidebar.css */
+.sidebar {
+    width: 100%;
+    margin: auto;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #383838;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding-top: 20px;
+  }
+  
+  .sidebar ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+    margin: auto;
+    flex-wrap: wrap; /* Allow items to wrap onto the next line */
+  }
+  
+  .sidebar li {
+    padding: 20px;
+    text-align: center;
+    list-style-type: none;
+    margin: auto;
+    flex: 1; /* Make each item take equal space */
+    max-width: 250px; /* Set a maximum width for each item */
+    box-sizing: border-box; /* Include padding and border in the width */
+  }
+  
+  .sidebar a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #555;
+    display: block;
+    transition: 0.3s;
+    margin: auto;
+  }
+  
+  .navImage {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-bottom: 5px;
+  }
+  
+  .navImage + p {
+    text-align: center;
+    font-family: 'Garamond';
+    color: whitesmoke;
+    font-size: 20px;
+  }
+  
+  /* Media Query for screens less than 700 pixels */
+  @media (max-width: 700px) {
+    .sidebar li {
+      flex: 1 0 33.33%; /* 3 items per row */
+      max-width: 33.33%; /* Set a maximum width for each item */
+    }
+  }
+  

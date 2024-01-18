@@ -1,0 +1,55 @@
+
+
+  /* Add this to your CSS file or within your component */
+
+  .admin-order-card {
+    width: 90%;
+    margin: auto;
+    /* background-color: #49796B; */
+    background-color: 	#383838;
+    box-shadow: 0 8px 16px rgba(252, 251, 251, 0.836), 0 4px 8px rgba(19, 19, 19, 0.748);
+    transition: transform 0.3s ease-in-out;
+    border-radius: 17px;
+  }
+  
+  .admin-order-card:hover {
+    transform: translateX(2px);
+  }
+  .status-icon {
+    display: inline-block;
+    padding: 5px 10px;
+    color: #fff;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  
+  .delivered {
+    background-color: #28a745 !important; /* Green for delivered */
+  }
+  
+  .processing {
+    background-color: #ffc107 !important; /* Yellow for processing */
+  }
+  
+  .custom-button-undeliver {
+    background-color: #49796B !important;
+    border: 2px solid gray !important;
+  }
+  
+  .custom-button-undeliver:hover {
+    background-color: #ccb87f ; /* Light green color on hover */
+  }
+
+  .custom-button-cancelled {
+    transition: background-color 0.3s ease !important;
+    background-color: #CD5C5C !important; /* Default green color */
+  }
+  .custom-button-deliver{
+    background-color: #49796B !important;
+    /* background-color: #ccb87f !important; */
+    border: 2px solid gray !important;
+  }
+  
+  .custom-button-deliver:hover{
+    background-color: #ccb87f;
+  }

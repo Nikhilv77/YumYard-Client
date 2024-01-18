@@ -1,0 +1,27 @@
+.table-container {
+    overflow-x: auto;
+  }
+  
+  .table {
+    width: 98%;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+  }
+  
+  th, td {
+    padding: 20px;
+    text-align: left;
+    border-bottom: 1px solid #e2e2e2;
+  }
+  
+  th {
+    background-color: #f7f7f7;
+    
+  }
+  
+  /* Background color and transition for row hover effect */
+  tr:hover {
+    background-color: #f0f8ff;
+    transition: background-color 0.3s ease;
+  }

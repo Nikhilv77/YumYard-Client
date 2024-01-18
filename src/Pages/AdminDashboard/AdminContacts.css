@@ -1,0 +1,81 @@
+/* Add or modify styles as needed */
+.table-container {
+    overflow-x: auto;
+  }
+  
+  .tableForContacts {
+    width: 98%;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(188, 171, 171, 0);
+    margin-bottom: 20px;
+  }
+  
+  .tableForContacts tr {
+    background-color: #383838;
+     /* Set a darker background color */
+    color: #ecf0f1; /* Set the text color */
+  }
+  
+  .tableForContacts th,
+  .tableForContacts td {
+    padding: 20px;
+    text-align: left;
+    border-bottom: 1px solid #34495e; /* Set a darker border color */
+  }
+  
+  .tableForContacts th {
+    background-color: #585858; /* Set a darker background color */
+  }
+  
+  /* Background color for row hover effect */
+  .tableForContacts tr:hover {
+    background-color: gray; /* Set a darker background color on hover */
+    transition: background-color 0.3s ease;
+  }
+  
+  .tableForContacts td.py-2.px-4.break-email {
+    word-break: break-all;
+  }
+  
+  /* Styles for the icons */
+  .plus-icon,
+  .edit-icon,
+  .trash-icon {
+    font-size: 20px;
+    cursor: pointer;
+    margin: 5px;
+    color: #3498db;
+    transition: color 0.3s ease;
+  }
+  
+  /* Styles for the image in the first column */
+  .tableForContacts img {
+    height: 60px;
+    width: 60px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  
+  /* Styles for the Success and Error messages */
+  .success-message,
+  .error-message {
+    font-size: 16px;
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  @media (max-width: 768px) {
+    /* Apply styles for screens larger than 768px */
+    .tableForContacts {
+      width: 95% !important;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    /* Apply styles for screens larger than 768px */
+    .tableForContacts {
+      width: 95% !important;
+    }
+  }
+  

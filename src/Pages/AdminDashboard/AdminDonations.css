@@ -1,0 +1,58 @@
+
+.admin-donation-card {
+  width: 100%;
+  margin: auto;
+  background-color: #383838;
+  box-shadow: 0 8px 16px rgba(74, 72, 72, 0.836), 0 4px 8px rgba(226, 226, 226, 0.748);
+  transition: box-shadow 0.3s ease;
+  border-radius: 17px;
+  height: 425px;
+  transition: transform 0.3s ease-in-out;
+}
+.admin-donation-card:hover {
+
+  transform: translateY(-4px);
+}
+.status-icon {
+  display: inline-block;
+  padding: 5px 10px;
+  color: #fff;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.delivered {
+  background-color: #28a745 !important; /* Green for delivered */
+}
+
+.processing {
+  background-color: #ffc107 !important; /* Yellow for processing */
+}
+
+.custom-button {
+  transition: background-color 0.3s ease;
+  background-color: #707070 !important; /* Default green color */
+}
+
+.custom-button:hover {
+  background-color: gray !important; /* Light green color on hover */
+}
+
+.custom-button-cancelled {
+  transition: background-color 0.3s ease !important;
+  background-color: #CD5C5C !important; /* Default green color */
+}
+.custom-button-delivered{
+  background-color: #00563f !important;
+  color: white !important;
+  border: 1px solid gray !important;
+}
+.amount-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 70px;
+  font-weight: bold;
+  color: #383838; /* Text color */
+}
