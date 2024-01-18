@@ -38,7 +38,7 @@ export const getUserOrders = ()=>async(dispatch,getState)=>{
 export const getAllOrders = ()=>async(dispatch)=>{
   dispatch({type:'GET_ALL_ORDERS_REQUEST'});
   try{
-  const response = await axios.get('/api/orders/getallorders');
+  const response = await axios.get('https://yumyard-server.onrender.com/api/orders/getallorders');
   dispatch({type:'GET_ALL_ORDERS_SUCCESS',payload:response.data})
   }catch(error){
   dispatch({type:'GET_ALL_ORDERS_FAILED',payload:error})

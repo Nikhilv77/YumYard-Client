@@ -93,39 +93,36 @@ function Home() {
   console.log(Sides,"coming from homejs")
   console.log(Bevarages,"coming from homejs")
 
-  const donationAmountArray = 1000
-  // Donations.map(
-  //   (donation) => donation.donationAmount
-  // );
+  const donationAmountArray = Donations.map(
+    (donation) => donation.donationAmount
+  );
   console.log(donationAmountArray,"coming from home")
-  const totalDonationsGenerated = 8000
-  // donationAmountArray.reduce(
-  //   (Accumulator, donationAmount) => Accumulator + donationAmount,
-  //   0
-  // );
-  const amountArray =2000
-  // Orders.map((order) => order.orderAmount);
-  // const totalAmountGenerated = amountArray.reduce(
-  //   (Accumulator, Amount) => Accumulator + Amount,
-  //   0
-  // );
+  const totalDonationsGenerated = donationAmountArray.reduce(
+    (Accumulator, donationAmount) => Accumulator + donationAmount,
+    0
+  );
+  const amountArray = Orders.map((order) => order.orderAmount);
+  const totalAmountGenerated = amountArray.reduce(
+    (Accumulator, Amount) => Accumulator + Amount,
+    0
+  );
   const totalRevenue = totalAmountGenerated;
   const totalDonations = totalDonationsGenerated;
-  const totalProducts = 20000
-    // pizzas.length +
-    // Burgers.length +
-    // Bevarages.length +
-    // Sides.length +
-    // Meals.length;
+  const totalProducts =
+    pizzas.length +
+    Burgers.length +
+    Bevarages.length +
+    Sides.length +
+    Meals.length;
   const menuCategories = 5;
 
   // Sample data for the restaurant's main metrics
   const restaurantData = [
-    { name: "Orders", value: 15  },//Orders.length
-    { name: "Customers", value: 15 }, // Users.length
-    { name: "Feedbacks", value:17 },//Feedbacks.length 
-    { name: "Contacts", value:22 },//Contacts.length 
-    { name: "Donations", value: 27 },//Donations.length 
+    { name: "Orders", value: Orders.length },
+    { name: "Customers", value: Users.length },
+    { name: "Feedbacks", value: Feedbacks.length },
+    { name: "Contacts", value: Contacts.length },
+    { name: "Donations", value: Donations.length },
   ];
 console.log(restaurantData,"data from homejs")
   // Data for the pie chart representing the selling of pizzas, burgers, Indian cuisine, beverages, and sides
@@ -139,9 +136,7 @@ console.log(restaurantData,"data from homejs")
 
   const feedbackStarsData = [0, 0, 0, 0, 0]; // Initialize an array to store counts for each star rating
 
-  const ratingArray = [5,5,5,5,5,5,5,5,5]
-  
-  // Feedbacks.map((feedback) => feedback.rating);
+  const ratingArray = Feedbacks.map((feedback) => feedback.rating);
   
   for (const rating of ratingArray) {
     feedbackStarsData[rating - 1] += 1; // Increment the count for the corresponding star rating
