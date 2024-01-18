@@ -146,6 +146,7 @@ console.log(restaurantData,"data from homejs")
     stars: `${index + 1}⭐`,
     count,
   }));
+  const COLORS = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042", "red"];
   if (orderLoading || userLoading || feedbackLoading || donationLoading || contactLoading || pizzaLoading || burgerLoading || mealLoading || loadingError || sideLoading) {
     return (
       <div className="card-container">
@@ -160,7 +161,7 @@ console.log(restaurantData,"data from homejs")
   }
   
   // Add a check for error state before rendering the component
-  if (orderError || userError || feedbackError || donationError || contactError || pizzaError || burgerError || mealError || bevarageError || sideError) {
+ else if (orderError || userError || feedbackError || donationError || contactError || pizzaError || burgerError || mealError || bevarageError || sideError) {
     return (
       <div className="card-container">
         <div style={{ display: "flex", height: "85vh", justifyContent: "center" }} className="card">
@@ -171,7 +172,8 @@ console.log(restaurantData,"data from homejs")
   }
 
   // Colors for the pie chart
-  const COLORS = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042", "red"];
+  else if(!orderLoading && !userLoading && !feedbackLoading && !donationLoading && !contactLoading && !pizzaLoading && !burgerLoading &&!mealLoading && !loadingError && !sideLoading)
+{
   return (
     <main className="main-container">
       <div className="small-cards">
@@ -281,7 +283,8 @@ console.log(restaurantData,"data from homejs")
         </div>
       </div>
     </main>
-  );
+  )
+}
 }
 
 export default Home;
