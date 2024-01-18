@@ -96,6 +96,7 @@ function Home() {
   const donationAmountArray = Donations.map(
     (donation) => donation.donationAmount
   );
+  console.log(donationAmountArray,"coming from home")
   const totalDonationsGenerated = donationAmountArray.reduce(
     (Accumulator, donationAmount) => Accumulator + donationAmount,
     0
@@ -123,7 +124,7 @@ function Home() {
     { name: "Contacts", value: Contacts.length },
     { name: "Donations", value: Donations.length },
   ];
-
+console.log(restaurantData,"data from homejs")
   // Data for the pie chart representing the selling of pizzas, burgers, Indian cuisine, beverages, and sides
   const pieChartData = [
     { name: "Pizzas", value: pizzas.length, label: "Pizzas" },
