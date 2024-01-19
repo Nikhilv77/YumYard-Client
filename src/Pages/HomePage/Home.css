@@ -17,13 +17,13 @@
   .hero-content {
     max-width: 800px;
     margin: 0 auto;
-    font-family: cursive;
+    font-family: 'Salsa', cursive;
   }
   
   .hero-text {
     font-size: 3em;
     margin-bottom: 20px;
-    font-family: 'Garamond';
+    font-family: 'EB Garamond', serif;
   }
   
   .hero-subtext {
@@ -53,7 +53,7 @@
   .heading-style {
     font-size: 2.5em;
     margin-bottom: 20px;
-    font-family: 'Garamond', sans-serif;
+    font-family: 'EB Garamond', serif;
     color: #333;
     transition: transform 0.3s ease-in-out;
   }
@@ -67,7 +67,7 @@
     align-items: stretch;
     flex-wrap: wrap;
     gap: 20px;
-    font-family: 'Garamond';
+    font-family: 'EB Garamond', serif;
     font-size: large;
     color: #333;
   }
@@ -100,7 +100,7 @@
   
   .button-style {
     margin-top: auto;
-    font-family: 'Garamond';
+    font-family: 'EB Garamond', serif;
     font-size: 1.2rem;
   }
   
@@ -120,7 +120,7 @@
   }
   
   .about-heading {
-    font-family: 'Garamond';
+    font-family: 'EB Garamond', serif;
     font-size: 2.5em;
     margin-bottom: 20px;
     color: #333;
@@ -133,7 +133,7 @@
   }
   
   .about-paragraph {
-    font-family: cursive;
+    font-family: 'Salsa', cursive;
     font-size: 1.2em;
     margin-bottom: 20px;
     color: #333;
@@ -163,7 +163,7 @@
   .freshness-heading-style {
     font-size: 2.5em;
     margin-bottom: 25px;
-    font-family: 'Garamond';
+    font-family: 'EB Garamond', serif;
     transition: transform 0.3s ease-in-out;
   }
   .freshness-heading-style:hover{
@@ -173,7 +173,7 @@
   .freshness-description-style {
     font-size: 1.2em;
     margin-bottom: 20px;
-    font-family: cursive;
+    font-family: 'Salsa', cursive;
   }
   
   .freshness-image-style {
@@ -194,7 +194,7 @@
   .testimonials-content {
     max-width: 800px;
     margin: 0 auto;
-    font-family: 'Garamond';
+    font-family: 'EB Garamond', serif;
   }
   .testimonials-content-h1{
     transition: transform 0.3s ease-in-out;
