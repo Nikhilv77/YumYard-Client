@@ -13,8 +13,8 @@ const News = () => {
    console.log(apiUrl);
     axios.post('https://yumyard-server.onrender.com/api/news/getNews',{apikey:`${process.env.REACT_APP_NEWS_API}`})
       .then(response => {
-        console.log(response,"response");
-        setNews(response.data.articles)
+        console.log(response.data.results,"response");
+        setNews(response.data.results)
       setLoading(false)})
       .catch(error => console.error('Error fetching news:', error));
   }, []);
@@ -30,9 +30,9 @@ const News = () => {
     <div className="NewsContainer">
     <div className='News'>
       {news.map(article => (
-        article.urlToImage &&
-        <div key={article.url} className='NewsCard'  onClick={() => window.open(article.url, '_blank')}>
-          {article.urlToImage && <img src={article.urlToImage} alt={article.title} />}
+        article.image_url &&
+        <div key={article.link} className='NewsCard'  onClick={() => window.open(article.link, '_blank')}>
+          {article.image_url && <img src={article.image_url} alt={article.title} />}
           <div className='NewsContent'>
             <h3>{article.title}</h3>
           </div>
