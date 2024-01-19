@@ -11,7 +11,7 @@ export const orderAction = (body) => async (dispatch) => {
     const response = await axios.post("https://yumyard-server.cyclic.app/api/orders/placeorder",body);
     dispatch({ type: "ORDER_SUCCESSFULL" });
     const sessionId = response.data.id;
-
+     console.log(sessionId,"hehe order action");
     if (sessionId) {
       const result = await stripe.redirectToCheckout({
         sessionId: sessionId,
