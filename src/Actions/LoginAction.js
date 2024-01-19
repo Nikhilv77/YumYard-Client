@@ -3,7 +3,7 @@ import axios from "axios";
 export const LoginAction = (loginInfo,loginFunction) => async (dispatch) => {
   dispatch({ type: "LOGIN_REQUEST" });
   try {
-    const response = await axios.post("https://yumyard-server.onrender.com/api/users/login",loginInfo);
+    const response = await axios.post("https://yumyard-server.cyclic.app/api/users/login",loginInfo);
     dispatch({ type: "LOGIN_SUCCESSFUL", payload: response.data });
     // Set cookie instead of localStorage
     Cookies.set("currUser", JSON.stringify(response.data));
