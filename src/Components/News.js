@@ -10,7 +10,7 @@ const News = () => {
 
   useEffect(() => {
     setLoading(true);
-    const apiUrl = `https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=${process.env.REACT_APP_NEWS_API}`;
+    const apiUrl = "https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=53322ee2b04d450ca57980d386f3c38a";
    console.log(apiUrl);
     axios.get(apiUrl)
       .then(response => {setNews(response.data.articles)
