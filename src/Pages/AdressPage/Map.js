@@ -3,7 +3,8 @@ import ReactMapGl, { Marker } from "react-map-gl";
 import PropTypes from "prop-types";
 
 const TOKEN =
-  'pk.eyJ1IjoibmlraGlsdmVybWEiLCJhIjoiY2xwZjg1eTdvMW53dTJqbms0bDNsNnlvciJ9.VytA2I6wwgdRxOIXSLzBLQ';
+  `${process.env.REACT_APP_MAPBOX_API}`;
+console.log(TOKEN)
 
 Map.propTypes = {
   longitude: PropTypes.number.isRequired,
