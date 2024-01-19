@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from "react";
 import ReactMapGl, { Marker } from "react-map-gl";
 import PropTypes from "prop-types";
+import mapboxgl from "mapbox-gl"; // This is a dependency of react-map-gl even if you didn't explicitly install it
+
+// eslint-disable-next-line import/no-webpack-loader-syntax
+mapboxgl.workerClass = require("worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker").default;
 
 const TOKEN =
   `${process.env.REACT_APP_MAPBOX_API}`;
