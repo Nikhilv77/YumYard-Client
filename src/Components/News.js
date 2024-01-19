@@ -11,7 +11,7 @@ const News = () => {
   useEffect(() => {
     setLoading(true);
 
-    axios.post('https://yumyard-server.onrender.com/api/news/getNews',{apikey:`${process.env.REACT_APP_NEWS_API}`})
+    axios.post('https://yumyard-server.onrender.com/api/news/getNews',{apiKey:`${process.env.REACT_APP_NEWS_API}`})
       .then(response => {
         console.log(response.data.results,"response");
         setNews(response.data.results)
