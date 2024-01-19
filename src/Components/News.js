@@ -10,8 +10,8 @@ const News = () => {
 
   useEffect(() => {
     setLoading(true);
-    console.log(`https://newsdata.io/api/1/news?apikey=${process.env.REACT_APP_NEWS_API}&q=food`);
-    axios.get(`https://newsdata.io/api/1/news?apikey=${process.env.REACT_APP_NEWS_API}&q=food`)
+
+    axios.get(`https://newsdata.io/api/1/news?apikey=${process.env.REACT_APP_NEWS_API}`)
       .then(response => {
         console.log(response.data.results,"response");
         setNews(response.data.results)
@@ -30,7 +30,7 @@ const News = () => {
     <div className="NewsContainer">
     <div className='News'>
       {news.map(article => (
-        article.image_url &&
+        article.image_url  &&
         <div key={article.link} className='NewsCard'  onClick={() => window.open(article.link, '_blank')}>
           {article.image_url && <img src={article.image_url} alt={article.title} />}
           <div className='NewsContent'>
