@@ -80,19 +80,19 @@ function App() {
           <Route path="/login" element={<LoginPage></LoginPage>}></Route>
           <Route path="/signup" element={<SignupPage></SignupPage>}></Route>
           <Route
-            path="/OrderSuccessful/:session_id"
+            path="/OrderSuccessful"
             element={<OrderSuccessful ></OrderSuccessful>}
           ></Route>
           <Route
-            path="/DonationSuccessful/:session_id"
+            path="/DonationSuccessful"
             element={<DonationSuccessful></DonationSuccessful>}
           ></Route>
           <Route
-            path="/OrderFailed/:session_id"
+            path="/OrderFailed"
             element={<OrderFailed></OrderFailed>}
           ></Route>
            <Route
-            path="/DonationFailed/:session_id"
+            path="/DonationFailed"
             element={<DonationFailed></DonationFailed>}
           ></Route>
           <Route path="/orders" element={<OrderPage></OrderPage>}></Route>
