@@ -1,14 +1,8 @@
-
-
 {
   "redirects": [
     {
-      "source": "/OrderSuccessful",
-      "destination": "/OrderSuccessful?session_id={CHECKOUT_SESSION_ID}"
-    },
-    {
-      "source": "/OrderFailed",
-      "destination": "/OrderSuccessful?session_id={CHECKOUT_SESSION_ID}&success=false"
+      "source": "https://yumyard-server.cyclic.app/api/orders/placeorder",
+      "destination": "/OrderSuccessful?session_id={CHECKOUT_SESSION_ID}",
     }
   ]
 }
