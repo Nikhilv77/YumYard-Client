@@ -6,6 +6,7 @@ import { useLocation } from "react-router-dom";
 import { saveThroughSession } from "../../Actions/OrderAction";
 
 const OrderSuccessful = () => {
+  console.log("order-successful");
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const location = useLocation();
@@ -15,7 +16,7 @@ const OrderSuccessful = () => {
     const transactionId = params.get("session_id")
     if(!transactionId){
       navigate('/404')
-    }
+    } 
     if(transactionId){
       dispatch(saveThroughSession(transactionId))
     }
