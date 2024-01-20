@@ -6,7 +6,7 @@ import { useLocation } from "react-router-dom";
 import { saveThroughSession } from "../../Actions/OrderAction";
 
 const OrderSuccessful = () => {
-  console.log("order-successful");
+  console.log("order-successfullllllllllllllllll");
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const location = useLocation();
