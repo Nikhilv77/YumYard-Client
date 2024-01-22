@@ -5,7 +5,7 @@ import { donationAction } from "../../Actions/DonationActions";
 import { CSSTransition } from "react-transition-group";
 import ClipLoader from "react-spinners/ClipLoader";
 import { useNavigate } from "react-router-dom";
-import html2pdf from 'html2pdf.js';
+
 const DonatePage = () => {
   const navigate = useNavigate();
   const [isClicked, setIsClicked] = useState(false);
@@ -32,110 +32,23 @@ const DonatePage = () => {
     return;
   }
   const { name, email, number } = currUser;
-  const generateHtml = (donationAmount,customAmount)=>{
-    const currentDate = new Date().toLocaleDateString();
-    const currentTime = new Date().toLocaleTimeString();
-    const receiptHTML = `
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-      <meta charset="UTF-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <style>
-        body {
-          font-family: 'Times Roman';
-          font-size:1.2rem;
-          margin: 20px;
-          padding: 20px;
-          max-width: 800px; 
-          margin: 0 auto;
-          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        h1{
-          text-align:center;
-          color:black;
-          font-size:1.7rem;
-        }
-        h2, h3 {
-          text-align: center;
-          color: black;
-          font-size:1.5rem;
-        }
-        .user-info {
-          margin-top: 20px;
-        }
-        .branding {
-          text-align: center;
-          font-size:1.2rem;
-          margin-top: 50px; /* Adjust the margin as needed */
-          font-style: italic;
-          color: #888; /* Choose a color that fits your design */
-        }
-      </style>
-    </head>
-    <body>
-      <h1>Donation Receipt</h1>
-  
-      <div class="user-info">
-        <h3>Donated by</h3>
-        <p><strong>Name:</strong> ${name}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Phone no.:</strong> ${number}</p>
-      </div>
-  
-      <div class="user-info">
-        <h3>Donated to</h3>
-        <p><strong>YumYard Pvt Ltd</strong></p>
-        <p><strong>Email:</strong> Donation@yumyard.com</p>
-        <p><strong>Phone no.:</strong> 7208291301</p>
-        <p><strong>Address:</strong> Mumbai, India</p>
-      </div>
-  
-      <h3>Donation Details</h3>
-      <p><strong>Donation Amount:</strong> ${donationAmount === "custom" ? +customAmount : +donationAmount} INR</p>
-      <p><strong>Date:</strong> ${currentDate}</p>
-      <p><strong>Time:</strong> ${currentTime}</p>
-  
-      <div class="branding">
-        <p>Thank you for supporting YumYard's initiative!</p>
-      </div>
-    </body>
-    </html>
-  `;
-  
-  return receiptHTML;
-  }
-  const generateInvoice = async () => {
-    try {
-      const html = generateHtml(donationAmount, customAmount);
-      const pdf = await html2pdf().from(html).outputPdf();
-  
-      return pdf;
-    } catch (error) {
-      console.log(error, "error generating pdf");
-    }
-  };
 
   const handleDonation = async () => {
-    if (donationAmount < 1) {
-      setDonationAmountError(true);
-      setTimeout(() => {
-        setDonationAmountError(false);
-      }, 3000);
-      return;
-    }
-    const pdfBuffer =await generateInvoice();
-    console.log(pdfBuffer,"coming from donate");
+  
     const body = {
       name: name,
       email: email,
       number: number,
       donationAmount:
         donationAmount === "custom" ? +customAmount : +donationAmount,
-        pdfBuffer:pdfBuffer
     };
-  
+    if (body.donationAmount < 1) {
+      setDonationAmountError(true);
+      setTimeout(() => {
+        setDonationAmountError(false);
+      }, 3000);
+      return;
+    }
     console.log(body);
 
     dispatch(donationAction(body));
@@ -158,7 +71,7 @@ const DonatePage = () => {
             maxWidth: "500px",
             width: "100%",
             borderRadius: "10px",
-            fontFamily: "'Tinos', serif",
+            fontFamily: "Times Roman",
           }}
         >
           <Card.Body>
