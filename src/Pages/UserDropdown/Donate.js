@@ -5,8 +5,7 @@ import { donationAction } from "../../Actions/DonationActions";
 import { CSSTransition } from "react-transition-group";
 import ClipLoader from "react-spinners/ClipLoader";
 import { useNavigate } from "react-router-dom";
-import html2canvas from 'html2canvas'
-import jsPDF from 'jspdf'
+import html2pdf from 'html2pdf.js';
 const DonatePage = () => {
   const navigate = useNavigate();
   const [isClicked, setIsClicked] = useState(false);
@@ -114,21 +113,9 @@ const DonatePage = () => {
     const generateInvoice = async () => {
       try {
         const html = generateHtml(donationAmount, customAmount);
-        const div = document.createElement('div');
-        div.innerHTML = html;
-        document.body.appendChild(div);
+        const pdf = await html2pdf().from(html).outputPdf();
     
-        const canvas = await html2canvas(div);
-        div.remove(); // Remove the temporary div from the DOM
-    
-        const pdf = new jsPDF({
-          orientation: 'portrait',
-          unit: 'px',
-          format: 'a4',
-        });
-    
-        pdf.addImage(canvas.toDataURL('image/png'), 'PNG', 0, 0, pdf.internal.pageSize.width, pdf.internal.pageSize.height);
-        return pdf.output();
+        return pdf;
       } catch (error) {
         console.log(error, "error generating pdf");
       }
