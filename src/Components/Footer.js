@@ -16,10 +16,10 @@ const EnhancedFooter = () => {
           <Col md={4}>
             <h4 style={{ marginBottom: "20px" }}>Quick Links</h4>
             <ul style={{ listStyleType: "none", padding: 0 }}>
-              <li style={{ marginBottom: "10px" }}><Link to="/" style={{ color: "#bbb", textDecoration: 'none' }}>Home</Link></li>
-              <li style={{ marginBottom: "10px" }}><Link to="/products" style={{ color: "#bbb", textDecoration: 'none' }}>Products</Link></li>
-              <li style={{ marginBottom: "10px" }}><Link to="/aboutus" style={{ color: "#bbb", textDecoration: 'none' }}>About Us</Link></li>
-              <li style={{ marginBottom: "10px" }}><Link to="/contactus" style={{ color: "#bbb", textDecoration: 'none' }}>Contact</Link></li>
+              <li style={{ marginBottom: "10px" }}><a href="/" style={{ color: "#bbb", textDecoration: 'none' }}>Home</a></li>
+              <li style={{ marginBottom: "10px" }}><a href="/products" style={{ color: "#bbb", textDecoration: 'none' }}>Products</a></li>
+              <li style={{ marginBottom: "10px" }}><a href="/aboutus" style={{ color: "#bbb", textDecoration: 'none' }}>About Us</a></li>
+              <li style={{ marginBottom: "10px" }}><a href="/contactus" style={{ color: "#bbb", textDecoration: 'none' }}>Contact</a></li>
             </ul>
           </Col>
           <Col md={4}>
