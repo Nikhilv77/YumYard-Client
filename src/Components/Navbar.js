@@ -19,9 +19,11 @@ function OffcanvasExample() {
   const cartState = useSelector((state) => state.cart);
   const cartItems = cartState.cartItems;
   const handleLogout = () => {
+    setNavbarExpanded(false)
     dispatch(logoutAction());
   };
   const handleSearch = ()=>{
+    setNavbarExpanded(false)
     if(category == 'indian'){
       navigate('/indian-meals',{state:searchValue})
     }
@@ -41,8 +43,17 @@ function OffcanvasExample() {
     },2500)
     return ()=>{clearInterval(interval)}
   },[searchHint])
+  const [navbarExpanded, setNavbarExpanded] = useState(false);
+
+  const handleNavbarToggle = () => {
+    setNavbarExpanded(!navbarExpanded);
+  };
+
+  const handleItemClick = () => {
+    setNavbarExpanded(false);
+  };
   return (
-    <Navbar variant='dark' bg="dark" expand="lg"  style={{ fontFamily: "'Tinos', serif",fontSize:'1.2rem'}}>
+    <Navbar variant='dark' expanded={navbarExpanded} bg="dark" expand="lg"  style={{ fontFamily: "'Tinos', serif",fontSize:'1.2rem'}}>
       <Container fluid>
         <Navbar.Brand > <Link to="/" className="navbar-brand">
           <img
@@ -51,39 +62,39 @@ function OffcanvasExample() {
             style={{ height: '65px', width: '100px' }}
           />
         </Link></Navbar.Brand>
-        <Navbar.Toggle aria-controls="offcanvasNavbar" />
+        <Navbar.Toggle aria-controls="offcanvasNavbar" onClick={handleNavbarToggle} />
         <Navbar.Collapse  id="offcanvasNavbar">
           <Nav className="mx-auto" align = "left">
-          <Nav.Link  as={Link} to="/">Home</Nav.Link>
+          <Nav.Link  as={Link} to="/" onClick={handleItemClick}>Home</Nav.Link>
           <Nav.Link as={Link} to="/cart">
-            <FaShoppingCart  size={25} />
-            <Badge bg="danger">{cartItems.length}</Badge>
+            <FaShoppingCart  size={25} onClick={handleItemClick}/>
+            <Badge bg="danger" onClick={handleItemClick}>{cartItems.length}</Badge>
           </Nav.Link>
           <NavDropdown  title={<span>Meals</span>} id="basic-nav-dropdown" align="end">
-      <NavDropdown.Item style={{fontSize:'1.2rem'}} className="dropdown-item" as={Link} to="/products">
+      <NavDropdown.Item onClick={handleItemClick} style={{fontSize:'1.2rem'}} className="dropdown-item" as={Link} to="/products">
         All Meals
       </NavDropdown.Item>
-      <NavDropdown.Item style={{fontSize:'1.2rem'}} className="dropdown-item" as={Link} to="/indian-meals">
+      <NavDropdown.Item onClick={handleItemClick} style={{fontSize:'1.2rem'}} className="dropdown-item" as={Link} to="/indian-meals">
         Indian
       </NavDropdown.Item>
-      <NavDropdown.Item style={{fontSize:'1.2rem'}} className="dropdown-item" as={Link} to="/pizzas">
+      <NavDropdown.Item onClick={handleItemClick} style={{fontSize:'1.2rem'}} className="dropdown-item" as={Link} to="/pizzas">
         Pizzas
       </NavDropdown.Item>
-      <NavDropdown.Item style={{fontSize:'1.2rem'}} className="dropdown-item" as={Link} to="/burgers">
+      <NavDropdown.Item onClick={handleItemClick} style={{fontSize:'1.2rem'}} className="dropdown-item" as={Link} to="/burgers">
         Burgers
       </NavDropdown.Item>
-      <NavDropdown.Item style={{fontSize:'1.2rem'}} className="dropdown-item" as={Link} to="/sides">
+      <NavDropdown.Item onClick={handleItemClick} style={{fontSize:'1.2rem'}} className="dropdown-item" as={Link} to="/sides">
         Sides & Snacks
       </NavDropdown.Item>
-      <NavDropdown.Item style={{fontSize:'1.2rem'}} className="dropdown-item" as={Link} to="/bevarages">
+      <NavDropdown.Item onClick={handleItemClick} style={{fontSize:'1.2rem'}} className="dropdown-item" as={Link} to="/bevarages">
         Beverages
       </NavDropdown.Item>
     </NavDropdown>
-          <Nav.Link  as={Link} to="/aboutus">About Us</Nav.Link>
-          <Nav.Link  as={Link} to="/contactus">Contact Us</Nav.Link>
-          <Nav.Link  as={Link} to="/blog">Blogs <BsNewspaper size={20} /></Nav.Link>
-          <Nav.Link  as={Link} to="/feedback">Feedback</Nav.Link>
-          <Nav.Link  as={Link} to="/FAQs">FAQs</Nav.Link>
+          <Nav.Link onClick={handleItemClick} as={Link} to="/aboutus">About Us</Nav.Link>
+          <Nav.Link onClick={handleItemClick} as={Link} to="/contactus">Contact Us</Nav.Link>
+          <Nav.Link onClick={handleItemClick} as={Link} to="/blog">Blogs <BsNewspaper size={20} /></Nav.Link>
+          <Nav.Link onClick={handleItemClick} as={Link} to="/feedback">Feedback</Nav.Link>
+          <Nav.Link onClick={handleItemClick} as={Link} to="/FAQs">FAQs</Nav.Link>
           </Nav>
           
           <Form className={`${window.innerWidth>991 ? 'd-flex' : ''}`}>
@@ -110,19 +121,19 @@ function OffcanvasExample() {
           {currUser ? (
             <NavDropdown className={`mb-1 ${window.innerWidth>991?'ms-5':''}`} title={<BsPerson  size={45} />} id="navbarDropdown" align="end">
               {currUser.isAdmin && <NavDropdown.Item  style={{fontSize:'1.2rem'}} href="/admin-dashboard">Administration</NavDropdown.Item>}
-              <NavDropdown.Item  style={{fontSize:'1.2rem'}} as = {Link} to="/account">Account</NavDropdown.Item>
-              <NavDropdown.Item style={{fontSize:'1.2rem'}} as = {Link} to="/cart">Cart</NavDropdown.Item>
-              <NavDropdown.Item style={{fontSize:'1.2rem'}} as = {Link} to="/wishlist">Favorites</NavDropdown.Item>
-              <NavDropdown.Item style={{fontSize:'1.2rem'}} as = {Link} to="/orders">Orders</NavDropdown.Item>
-              <NavDropdown.Item style={{fontSize:'1.2rem'}} as = {Link} to="/donate">Donate</NavDropdown.Item>
-              <NavDropdown.Item style={{fontSize:'1.2rem'}} as = {Link} to="/help-and-support">Help and Support</NavDropdown.Item>
-              <NavDropdown.Item style={{fontSize:'1.2rem'}} as = {Link} to="/terms-and-conditions">Terms & Conditions</NavDropdown.Item>
+              <NavDropdown.Item onClick={handleItemClick}  style={{fontSize:'1.2rem'}} as = {Link} to="/account">Account</NavDropdown.Item>
+              <NavDropdown.Item onClick={handleItemClick} style={{fontSize:'1.2rem'}} as = {Link} to="/cart">Cart</NavDropdown.Item>
+              <NavDropdown.Item onClick={handleItemClick} style={{fontSize:'1.2rem'}} as = {Link} to="/wishlist">Favorites</NavDropdown.Item>
+              <NavDropdown.Item onClick={handleItemClick} style={{fontSize:'1.2rem'}} as = {Link} to="/orders">Orders</NavDropdown.Item>
+              <NavDropdown.Item onClick={handleItemClick} style={{fontSize:'1.2rem'}} as = {Link} to="/donate">Donate</NavDropdown.Item>
+              <NavDropdown.Item onClick={handleItemClick} style={{fontSize:'1.2rem'}} as = {Link} to="/help-and-support">Help and Support</NavDropdown.Item>
+              <NavDropdown.Item onClick={handleItemClick} style={{fontSize:'1.2rem'}} as = {Link} to="/terms-and-conditions">Terms & Conditions</NavDropdown.Item>
               <NavDropdown.Item style={{fontSize:'1.2rem'}} onClick={handleLogout}>Logout</NavDropdown.Item>
             </NavDropdown>
           ) : (
             <Nav align = 'left' className={`mb-1 ${window.innerWidth>991?'ms-5':''}`}>
             
-              <Link style={{fontSize:'1.6rem'}} className="nav-link" to="/login">
+              <Link onClick={handleItemClick} style={{fontSize:'1.6rem'}} className="nav-link" to="/login">
                 Login
               </Link>
             </Nav>
