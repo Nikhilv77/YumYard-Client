@@ -5,13 +5,13 @@ export const orderAction = (body) => async (dispatch) => {
     `${process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY}`
   );
   dispatch({ type: "ORDER_REQUEST" });
-  console.log(body);
+
 
   try {
     const response = await axios.post("https://yumyard-server.cyclic.app/api/orders/placeorder",body);
     dispatch({ type: "ORDER_SUCCESSFULL" });
     const sessionId = response.data.id;
-     console.log(sessionId,"hehe order action");
+ 
     if (sessionId) {
       const result = await stripe.redirectToCheckout({
         sessionId: sessionId,
@@ -28,7 +28,7 @@ export const getUserOrders = ()=>async(dispatch,getState)=>{
     dispatch({type:'GET_USER_ORDERS_REQUEST'})
     try{
       const response = await axios.post('https://yumyard-server.cyclic.app/api/orders/getUserOrders',{currUserEmail:currUserEmail});
-      // console.log(response.data,'coming from actions');
+     
       dispatch({type:"GET_USER_ORDERS_SUCCESS",payload:response.data})
     }catch(error){
       dispatch({type:'GET_USER_ORDERS_FAILED',payload:error})
@@ -72,9 +72,9 @@ export const downloadOrderReceiptAction = (transactionId) => async (dispatch) =>
   try {
     const response = await axios.post('https://yumyard-server.cyclic.app/api/session-orders/downloadreceipt', { transactionId });
     dispatch({ type: 'DOWNLOAD_RECEIPT_SUCCESSFUL', payload: response.data });
-    return response.data; // Return the data for use in the calling function
+    return response.data;
   } catch (error) {
     dispatch({ type: 'DOWNLOAD_RECEIPT_FAILED' });
-    throw error; // Re-throw the error to propagate it to the calling function if needed
+    throw error; 
   }
 };

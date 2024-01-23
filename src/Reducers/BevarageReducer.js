@@ -45,7 +45,7 @@ export const getAllBevaragesReducer = (state={loading:false, Bevarages:[],error:
             deleteError: action.payload,
         };
       default:
-        return state; // No need to spread state here, just return the existing state
+        return state; 
     }
   };
 

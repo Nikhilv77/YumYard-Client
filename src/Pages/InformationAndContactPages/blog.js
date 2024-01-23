@@ -1,4 +1,3 @@
-// StylishBlogPage.jsx
 import React, { useEffect, useState } from "react";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
@@ -15,21 +14,21 @@ const StylishBlogPage = () => {
       title: "The Art of Pizza Making",
       content:
         "Explore the mouth-watering world of pizzas at YumYard. From classic Margherita to exotic toppings, we have it all! Indulge in a symphony of flavors crafted with passion and precision.",
-      image: "/pizzaBlog.jpg", // Replace with the actual image URL
+      image: "/pizzaBlog.jpg", 
     },
     {
       id: 2,
       title: "Burger Bliss: Crafting the Ultimate Burger Experience",
       content:
         "Dive into the world of juicy burgers. Our burgers are made with the finest ingrediants to satisfy your cravings. Experience taste and health at the same time.",
-      image: "/burgerB.jpg", // Replace with the actual image URL
+      image: "/burgerB.jpg", 
     },
     {
       id: 3,
       title: "A Culinary Odyssey: Exploring Indian Cuisines",
       content:
         "Experience the rich and diverse flavors of Indian cuisines. From spicy curries to flavorful biryanis, we have something for everyone.",
-      image: "/indianCuisine.jpg", // Replace with the actual image URL
+      image: "/indianCuisine.jpg", 
     },
   ];
 

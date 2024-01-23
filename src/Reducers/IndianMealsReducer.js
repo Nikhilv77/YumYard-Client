@@ -45,7 +45,7 @@ export const getAllIndianMealsReducer = (state={loading:false,Meals:[],error:fal
             deleteError: action.payload,
         };
       default:
-        return state; // No need to spread state here, just return the existing state
+        return state; 
     }
   };
   export const addNewIndianReducer = (state = { loading: false, success: false, error: null },action)=>{

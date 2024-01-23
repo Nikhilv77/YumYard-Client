@@ -8,7 +8,7 @@ mapboxgl.workerClass = require("worker-loader!mapbox-gl/dist/mapbox-gl-csp-worke
 
 const TOKEN =
   `${process.env.REACT_APP_MAPBOX_API}`;
-console.log(TOKEN)
+
 
 Map.propTypes = {
   longitude: PropTypes.number.isRequired,
@@ -46,7 +46,7 @@ function Map({ longitude, latitude, updateCoordinates }) {
     <div className="map-container">
       <ReactMapGl
         {...viewport}
-        key={markerKey} // Update the key to force re-render
+        key={markerKey} // key to force re-render
         mapboxAccessToken={TOKEN}
         mapStyle="mapbox://styles/mapbox/streets-v12"
         onMove={(event) => {
@@ -54,7 +54,7 @@ function Map({ longitude, latitude, updateCoordinates }) {
         }}
       >
         <Marker
-          key={markerKey} // Update the key to force re-render
+          key={markerKey} // key to force re-render
           latitude={latitude}
           longitude={longitude}
           draggable={true}

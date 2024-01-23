@@ -10,7 +10,7 @@ const TermsAndConditionsPage = () => {
   },[])
   const navigate = useNavigate();
   const cardStyle = {
-    maxWidth: '600px', // Adjust the maximum width as needed
+    maxWidth: '600px', 
     margin: '0 auto',
     borderRadius:'10px',
     fontFamily: "'Tinos', serif",
@@ -20,7 +20,7 @@ const TermsAndConditionsPage = () => {
   const paragraphStyle = {
     textAlign: 'left',
     textIndent: '2em',
-    fontSize:'1.2rem' // Adjust the indentation as needed
+    fontSize:'1.2rem' 
   };
 
   return (

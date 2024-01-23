@@ -7,7 +7,7 @@ export default function OrderFailed() {
   useEffect(() => {
     const Params = new URLSearchParams(location.search);
     const isFailed = Params.get("success");
-    console.log(isFailed!==false);
+   
     if (isFailed == true) {
       navigate("/404");
     }

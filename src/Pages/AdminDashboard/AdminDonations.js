@@ -16,7 +16,6 @@ const AdminDonations = () => {
   useEffect(() => {
     dispatch(getAllDonations());
   }, [success]);
-  console.log(success);
   const { Donations, loading, error } = useSelector(
     (state) => state.allDonations
   );

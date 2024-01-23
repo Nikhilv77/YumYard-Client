@@ -46,7 +46,7 @@ export const addToWishlistAction=(identifier,product)=>(dispatch,getState)=>{
              price:product.price
         }
     }
- console.log(wishlistItem);
+
 dispatch({type:"ADD_TO_WISHLIST",payload:wishlistItem})
 localStorage.setItem('wishlistItems',JSON.stringify(getState().wishlist.wishlistItems));
 }

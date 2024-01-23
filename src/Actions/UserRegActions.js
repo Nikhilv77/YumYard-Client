@@ -4,7 +4,7 @@ export const userRegAction = (user) => async (dispatch) => {
   dispatch({ type: "REGISTRATION_REQUEST" });
   try {
     const response = await axios.post("https://yumyard-server.cyclic.app/api/users/signup", user);
-    console.log(response.data);
+
     dispatch({ type: "REGISTRATION_SUCCESS", payload: response });
   } catch (error) {
     console.log(error);
@@ -24,7 +24,7 @@ export const getAllUsers = () => async (dispatch) => {
 };
 export const removeUser = (userId,adminAction) => async (dispatch) => {
   dispatch({ type: "REMOVE_USER_REQUEST" });
-  console.log(userId);
+
 
   try {
     const response = await axios.post("https://yumyard-server.cyclic.app/api/users/removeusers", { userId });

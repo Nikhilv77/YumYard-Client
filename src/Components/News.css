@@ -1,9 +1,7 @@
-/*
- src/News.css */
 
  .NewsContainer {
-    max-height: 800px; /* Set the maximum height based on your requirement */
-    overflow-y: auto; /* Enable vertical scrolling */
+    max-height: 800px; 
+    overflow-y: auto; 
   }
 .News {
 

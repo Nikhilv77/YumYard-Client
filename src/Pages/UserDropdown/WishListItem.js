@@ -29,7 +29,7 @@ const WishlistItem = ({ item }) => {
   if (existingItem) {
     itemQuantity = +existingItem.quantity;
   }
-  console.log(itemQuantity);
+  
 
   const sendToCart = () => {
     setIsClicked(true)

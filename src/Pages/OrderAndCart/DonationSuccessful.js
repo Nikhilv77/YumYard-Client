@@ -26,7 +26,7 @@ const DonationSuccessful = () => {
   try {
     setReceiptLoading(true)
     const Receipt = await dispatch(downloadDonationReceiptAction(transactionId));
-    console.log(Receipt);
+    
     const pdfUIntArray = new Uint8Array(Receipt)
     const blob = new Blob([pdfUIntArray],{type:'application/pdf'})
     const link = document.createElement("a");

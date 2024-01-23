@@ -18,7 +18,7 @@ export const getFilteredIndianMeals = (searchValue, category) => async (dispatch
       filteredIndianMeals = response.data.filter((meal) =>
         meal.name.toLowerCase().includes(searchValue.toLowerCase())
       );
-      console.log(filteredIndianMeals);
+    
       if (category !== "all") {
         filteredIndianMeals = filteredIndianMeals.filter(
           (meal) => meal.category.toLowerCase() === category.toLowerCase()

@@ -90,13 +90,11 @@ function Home() {
   const SidesState = useSelector((state) => state.Sides);
   const { Sides, error: sideError, loading: sideLoading } = SidesState;
 
-  console.log(Sides,"coming from homejs")
-  console.log(Bevarages,"coming from homejs")
 
   const donationAmountArray = Donations.map(
     (donation) => donation.donationAmount
   );
-  console.log(donationAmountArray,"coming from home")
+ 
   const totalDonationsGenerated = donationAmountArray.reduce(
     (Accumulator, donationAmount) => Accumulator + donationAmount,
     0
@@ -124,7 +122,7 @@ function Home() {
     { name: "Contacts", value: Contacts.length },
     { name: "Donations", value: Donations.length },
   ];
-console.log(restaurantData,"data from homejs")
+
   // Data for the pie chart representing the selling of pizzas, burgers, Indian cuisine, beverages, and sides
   const pieChartData = [
     { name: "Pizzas", value: pizzas.length, label: "Pizzas" },
@@ -134,12 +132,12 @@ console.log(restaurantData,"data from homejs")
     { name: "Sides", value: Sides.length, label: "Sides" },
   ];
 
-  const feedbackStarsData = [0, 0, 0, 0, 0]; // Initialize an array to store counts for each star rating
+  const feedbackStarsData = [0, 0, 0, 0, 0]; //array to store counts for each star rating
 
   const ratingArray = Feedbacks.map((feedback) => feedback.rating);
   
   for (const rating of ratingArray) {
-    feedbackStarsData[rating - 1] += 1; // Increment the count for the corresponding star rating
+    feedbackStarsData[rating - 1] += 1; // Increment of the count for the corresponding star rating
   }
   
   const feedbackStarsDataFormatted = feedbackStarsData.map((count, index) => ({
@@ -160,7 +158,7 @@ console.log(restaurantData,"data from homejs")
     );
   }
   
-  // Add a check for error state before rendering the component
+  //check for error state before rendering the component
  else if (orderError || userError || feedbackError || donationError || contactError || pizzaError || burgerError || mealError || bevarageError || sideError) {
     return (
       <div >

@@ -25,7 +25,7 @@ export const donationReducer = (state = { loading: false, success: false, error:
           
         };
       default:
-        return state; // No need to spread state here, just return the existing state
+        return state; 
     }
   };
 
@@ -79,7 +79,7 @@ export const sessionDonationReducer = (state = { loading: false, success: false,
         
       };
     default:
-      return state; // No need to spread state here, just return the existing state
+      return state; 
   }
 };
 

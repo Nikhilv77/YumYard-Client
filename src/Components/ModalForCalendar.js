@@ -1,4 +1,4 @@
-// AddProductsModalForOtherProducts.js
+
 import React from "react";
 import Modal from "react-modal";
 
@@ -27,11 +27,10 @@ export const AddProductsModalForOtherProducts = ({
 
   const mediaQuery = window.matchMedia("(max-width: 1024px)");
   if (mediaQuery.matches) {
-    console.log(mediaQuery);
     customStyles.content.width = "80%";
   }
 
-  console.log("IsModalOpen:", isOpen);
+ 
 
   return (
     <Modal

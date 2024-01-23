@@ -31,7 +31,7 @@ export const orderReducer = (state = { order: { loading: false, success: false, 
         }
       };
     default:
-      return state; // No need to spread state here, just return the existing state
+      return state; 
   }
 };
 
@@ -105,7 +105,7 @@ export const deliveryReducer = (state = {deliveryLoading: false, success: false,
           deliveryError: action.payload,
       };
     default:
-      return state; // No need to spread state here, just return the existing state
+      return state; 
   }
 };
 
@@ -134,7 +134,7 @@ export const deleteOrderReducer= (state = {deleteLoading: false, success: false,
           deleteError: action.payload,
       };
     default:
-      return state; // No need to spread state here, just return the existing state
+      return state; 
   }
 };
 
@@ -166,7 +166,7 @@ export const sessionOrderReducer = (state = { loading: false, success: false, er
         
       };
     default:
-      return state; // No need to spread state here, just return the existing state
+      return state;
   }
 };
 

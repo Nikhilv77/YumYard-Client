@@ -97,7 +97,7 @@ export default function AdminUsers() {
                     <>
                       <img
                         style={{ height: "60px", width: "60px" }}
-                        src="/admin-icon.jpg"  // Replace with the correct URL or filename
+                        src="/admin-icon.jpg"  
                         alt="admin"
                         className="object-cover rounded"
                       />
@@ -108,7 +108,7 @@ export default function AdminUsers() {
                     <>
                       <img
                         style={{ height: "60px", width: "60px" }}
-                        src="/customer-icon.jpg"  // Replace with the correct URL or filename
+                        src="/customer-icon.jpg" 
                         alt="customer"
                         className="object-cover rounded"
                       />

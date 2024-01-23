@@ -4,7 +4,7 @@ export const getAllBevaragesAction = ()=>async(dispatch)=>{
 dispatch({type:'GET_ALL_BEVARAGES_REQUEST'})
 try {
     const response = await axios.get('https://yumyard-server.cyclic.app/api/bevarages/getallbevarages')
-    console.log(response.data);
+   
     dispatch({type:'GET_ALL_BEVARAGES_SUCCESSFUL',payload:response.data})
 } catch (error) {
     dispatch({type:'GET_ALL_BEVARAGES_FAILED',payload:error})

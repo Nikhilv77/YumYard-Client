@@ -1,4 +1,4 @@
-// src/News.js
+
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import ClipLoader from 'react-spinners/ClipLoader'
@@ -13,7 +13,6 @@ const News = () => {
 
     axios.get(`https://newsdata.io/api/1/news?apikey=${process.env.REACT_APP_NEWS_API}`)
       .then(response => {
-        console.log(response.data.results,"response");
         setNews(response.data.results)
       setLoading(false)})
       .catch(error => console.error('Error fetching news:', error));

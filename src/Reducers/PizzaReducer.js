@@ -71,7 +71,7 @@ export const deleteProductReducer= (state = {deleteLoading: false, success: fals
             deleteError: action.payload,
         };
       default:
-        return state; // No need to spread state here, just return the existing state
+        return state; 
     }
   };
 

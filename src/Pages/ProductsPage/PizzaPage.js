@@ -10,7 +10,7 @@ import { useLocation } from "react-router-dom";
 export default function PizzaPage() {
   const location = useLocation();
   const searchValue = location.state;
-  console.log(searchValue);
+ 
   const dispatch = useDispatch({});
   const pizzaState = useSelector((state) => state.pizzas);
   const { pizzas, loading, error } = pizzaState;

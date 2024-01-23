@@ -11,7 +11,7 @@ export const getAllContactsActions = ()=>async(dispatch)=>{
 }
 
 export const submitContactActions = (data)=> async(dispatch)=>{
-    console.log(data,"coming form actions");
+  
     dispatch({type:'SUBMIT_CONTACT_REQUEST'});
     try {
         const response = await axios.post('https://yumyard-server.cyclic.app/api/contacts/submitcontact',{data})

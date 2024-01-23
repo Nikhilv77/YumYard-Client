@@ -60,7 +60,7 @@ export default function Burger({ burger }) {
       dispatch(deleteFromWishlistAction(burger))
     }else{
       setIsFavorite(true);
-      console.log(burger);
+   
       dispatch(addToWishlistAction("burger",burger))
     }
   };

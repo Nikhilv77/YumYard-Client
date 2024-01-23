@@ -25,7 +25,7 @@ const DonatePage = () => {
 
   const dispatch = useDispatch();
   const [donationAmount, setDonationAmount] = useState("");
-  const [customAmount, setCustomAmount] = useState(""); // Separate state for custom amount
+  const [customAmount, setCustomAmount] = useState(""); 
   
   if(!currUser){
     navigate('/404');
@@ -49,7 +49,7 @@ const DonatePage = () => {
       }, 3000);
       return;
     }
-    console.log(body);
+  
 
     dispatch(donationAction(body));
   };

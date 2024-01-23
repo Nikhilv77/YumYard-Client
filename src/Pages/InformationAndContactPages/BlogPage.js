@@ -1,4 +1,3 @@
-// BlogPage.jsx
 import React from "react";
 import { Container, Card, Button, Row, Col } from "react-bootstrap";
 import { useParams, Link } from "react-router-dom";
@@ -9,7 +8,7 @@ export const BlogPage = ({ blogs }) => {
   const blog = blogs.find((item) => item.id === parseInt(blogId));
   const blogContent = blog.content;
 
-  // Return a loading message if the blog is not found
+ 
   if (!blog) {
     return <div>Loading...</div>;
   }

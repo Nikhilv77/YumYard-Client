@@ -58,7 +58,7 @@ const ForgetPasswordPage = () => {
             <h2 className="text-center mb-4">Reset Password</h2>
             <Form>
               <Form.Group controlId="formEmail">
-                {/* <Form.Label>Email address</Form.Label> */}
+         
                 <Form.Control
                   style={{ fontSize: "1.2rem" }}
                   type="email"
@@ -110,7 +110,7 @@ const ForgetPasswordPage = () => {
                 <p style={{ fontSize: "1.2rem" }}>
                   (You can reset your password once logged in)
                 </p>
-                {/* Include logic for sending this OTP to the user's email */}
+              
               </div>
             </Form>
           </Card>

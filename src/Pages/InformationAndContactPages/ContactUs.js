@@ -30,7 +30,6 @@ const ContactUs = () => {
     try {
       const response = await axios.post('https://yumyard-server.cyclic.app/api/users/doescontactexist',{value});
       data = {...value,isCustomer:true}
-      console.log(data);
       dispatch(submitContactActions(data))
     } catch (error) {
       data = {...value,isCustomer:false}

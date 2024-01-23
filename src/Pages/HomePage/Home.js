@@ -12,7 +12,7 @@ const HomePage = () => {
     setShowHome(true)
   },[])
   const navigate = useNavigate();
-  // Define your slider settings
+ 
   const sliderSettings = {
     dots: true,
     infinite: true,
@@ -32,7 +32,7 @@ const HomePage = () => {
        
           <div>
         <Slider {...sliderSettings}>
-          {/* Add your slider images as div elements */}
+       
           <div>
             <img src="/homepage-logo.jpg" alt="Slider 1" className='slider-image' />
           </div>
@@ -42,7 +42,7 @@ const HomePage = () => {
           <div>
             <img src="/newp.jpg" alt="Slider 3" className='slider-image' />
           </div>
-          {/* Add more slider images as needed */}
+      
         </Slider>
         <div style={{position:'relative', minHeight:'200px',overflow:'hidden'}} >
         <CSSTransition in = {showHome}
@@ -126,7 +126,7 @@ const HomePage = () => {
           "Our commitment is not just to satisfy your hunger but to deliver an unforgettable dining experience. Every dish is crafted with precision, using the freshest ingredients and a dash of creativity, ensuring a symphony of flavors in every bite."
         </p>
         <img
-          src="/restraunt.jpg" // Replace with the actual path to your image
+          src="/restraunt.jpg"
           alt="About YumYard"
           className='about-image'
         />
@@ -141,9 +141,9 @@ const HomePage = () => {
           We take pride in using only the freshest ingredients to create delicious and flavorful dishes.
           Our chefs are dedicated to cooking your meals fresh, ensuring a delightful dining experience.
         </p>
-        {/* Include an image that represents freshness */}
+      
         <img
-          src="/fresh-vegetables.jpeg" // Replace with the actual path to your image
+          src="/fresh-vegetables.jpeg" 
           alt="Fresh Ingredients"
           className='freshness-image-style'
         />
@@ -182,19 +182,19 @@ const HomePage = () => {
 const testimonials = [
   {
     userName: 'John Doe',
-    userImage: '/customer1.jpeg', // Replace with the actual path to the image
+    userImage: '/customer1.jpeg', 
     comment: 'Delicious food and excellent service! Will be back.',
     rating: 5,
   },
   {
     userName: 'Jane Smith',
-    userImage: '/customer2.jpg', // Replace with the actual path to the image
+    userImage: '/customer2.jpg', 
     comment: 'The burgers here are simply amazing. Great ambiance too!',
     rating: 5,
   },
   {
     userName: 'Michael Johnson',
-    userImage: '/customer3.jpg', // Replace with the actual path to the image
+    userImage: '/customer3.jpg',
     comment: 'Loved the variety of dishes. Amazing experience.',
     rating: 5,
   },

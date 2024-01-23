@@ -42,7 +42,7 @@ const FeedbackForm = () => {
     try {
       const response = await axios.post('https://yumyard-server.cyclic.app/api/users/doesfeedbackexist',{value});
       data = {...value,isCustomer:true}
-      console.log(data);
+     
       dispatch(submitFeedbackActions(data))
     } catch (error) {
       data = {...value,isCustomer:false}

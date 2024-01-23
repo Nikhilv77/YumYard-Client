@@ -1,4 +1,4 @@
-// AddPizza.js
+
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addBurger, getAllBurgersAction } from "../../Actions/BurgerActions";

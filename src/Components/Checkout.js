@@ -9,7 +9,7 @@ export default function Checkout({ totalPrice,address }) {
  const currUser = useSelector(state=>state.login.currUser);
  const cartItems = useSelector(state=>state.cart.cartItems);
   const tokenHandler = async () => {
-    console.log(address);
+  
     const body = {
       cartItems,
       currUser,

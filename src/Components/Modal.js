@@ -20,7 +20,6 @@ export const AddProductsModal = ({ Children, isOpen, onRequestClose }) => {
     },
   };
 
-  // Update the width to 75% for smaller screens
   const mediaQuery = window.matchMedia("(max-width: 768px)");
   if (mediaQuery.matches) {
     customStyles.content.width = "75%";

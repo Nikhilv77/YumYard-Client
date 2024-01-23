@@ -43,7 +43,7 @@ export default function QuestionsAndAnswers() {
           answer:
             "The funds from your donations go directly towards providing meals, shelter, and education for homeless and underprivileged children. We are committed to ensuring that every penny is used to make a positive impact in their lives.",
         },
-        // Add more FAQs as needed
+        
       ];
     
       return (

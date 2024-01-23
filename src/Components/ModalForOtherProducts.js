@@ -8,12 +8,12 @@ export const AddProductsModalForOtherProducts = ({ Children, isOpen, onRequestCl
       margin: "auto",
       maxHeight: "65vh",
       overflow: "auto",
-      borderRadius: "10px", // Add rounded corners
-      backgroundColor: "white", // Light grey background color
-      boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)", // Add a subtle shadow
+      borderRadius: "10px", 
+      backgroundColor: "white", 
+      boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)", 
     },
     overlay: {
-      backgroundColor: "rgba(0, 0, 0, 0.7)", // Adjust the overlay background color and transparency
+      backgroundColor: "rgba(0, 0, 0, 0.7)", 
       display: "flex",
       justifyContent: "center",
       alignItems: "center",

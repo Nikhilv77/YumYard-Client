@@ -4,7 +4,7 @@ export const getAllSidesAction = ()=>async(dispatch)=>{
 dispatch({type:'GET_ALL_SIDES_REQUEST'})
 try {
     const response = await axios.get('https://yumyard-server.cyclic.app/api/sides/getallsides')
-    console.log(response.data);
+  
     dispatch({type:'GET_ALL_SIDES_SUCCESSFUL',payload:response.data})
 } catch (error) {
     dispatch({type:'GET_ALL_SIDES_FAILED',payload:error})

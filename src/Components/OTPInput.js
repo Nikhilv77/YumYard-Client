@@ -14,7 +14,6 @@ const OTPInput = ({ oneTP, loginInfo }) => {
   const [invalidOTP, setInvalidOTP] = useState(false);
   const [loading, setLoading] = useState(false);
   const dispatch = useDispatch();
-  console.log(invalidOTP);
   const loginFunction = ()=>{
     navigate('/')
    }

@@ -44,7 +44,7 @@ export const deleteburgerReducer= (state = {deleteLoading: false, success: false
             deleteError: action.payload,
         };
       default:
-        return state; // No need to spread state here, just return the existing state
+        return state; 
     }
   };
 

@@ -45,7 +45,7 @@ export const getAllSidesReducer = (state={loading:false, Sides:[],error:false},a
             deleteError: action.payload,
         };
       default:
-        return state; // No need to spread state here, just return the existing state
+        return state; 
     }
   };
 

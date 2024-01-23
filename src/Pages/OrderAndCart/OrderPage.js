@@ -29,7 +29,7 @@ const OrderPage = () => {
     } else {
       dispatch(getUserOrders());
     }
-  }, [dispatch, success]); // Include success in the dependency array
+  }, [dispatch, success]); 
 
   const { orders, loading, error } = useSelector((state) => state.orders);
 

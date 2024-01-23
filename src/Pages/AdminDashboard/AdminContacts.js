@@ -16,7 +16,7 @@ const AdminContacts =  () => {
     dispatch(getAllContactsActions());
   }, []);
   const { Contacts, loading, error } = useSelector((state) => state.Contacts);
-  console.log(Contacts);
+ 
   const sortedContacts = useMemo(
     () =>
      Contacts && Contacts.length > 0

@@ -1,4 +1,4 @@
-// ProductForm.js
+
 import React from "react";
 
 const ProductFormForOthers = ({

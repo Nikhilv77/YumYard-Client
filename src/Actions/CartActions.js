@@ -1,5 +1,5 @@
 export const addToCartAction=(identifier,product,variant,quantity)=>(dispatch,getState)=>{
-    console.log(identifier,product,variant,quantity);
+   
     const numberQuantity = +quantity
     let cartItem;
     if(identifier === "pizza"){

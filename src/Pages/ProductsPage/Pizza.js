@@ -65,7 +65,6 @@ export default function Pizza({ pizza }) {
       dispatch(deleteFromWishlistAction(pizza))
     }else{
       setIsFavorite(true);
-      console.log(pizza);
       dispatch(addToWishlistAction("pizza",pizza))
     }
   };
