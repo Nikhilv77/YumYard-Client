@@ -71,7 +71,7 @@ const DonatePage = () => {
             maxWidth: "500px",
             width: "100%",
             borderRadius: "10px",
-            fontFamily: "Times Roman",
+            fontFamily: "'Tinos', serif",
           }}
         >
           <Card.Body>

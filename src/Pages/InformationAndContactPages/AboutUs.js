@@ -11,7 +11,7 @@ const AboutUsPage = () => {
   },[])
   return (
 
-      <Card style={{fontFamily:'Gamarond', padding: "20px", boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2), 0 8px 16px rgba(0, 0, 0, 0.2)" }}>
+      <Card style={{fontFamily:"'Tinos', serif", padding: "20px", boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2), 0 8px 16px rgba(0, 0, 0, 0.2)" }}>
         <Card.Title>
           <h2 style={{ marginBottom: "20px", color: "#333", textAlign: "center" }}>About Us</h2>
         </Card.Title>
