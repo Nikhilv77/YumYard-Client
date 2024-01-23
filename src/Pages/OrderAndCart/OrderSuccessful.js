@@ -25,7 +25,7 @@ const OrderSuccessful = () => {
     <div className="text-center">
      
 
-      <Card style={{ width: "500px", margin: "30px auto", fontFamily: "'Tinos', serif", fontSize:'1.2rem' }}>
+      <Card style={{ maxWidth: "500px", margin: "30px auto", fontFamily: "'Tinos', serif", fontSize:'1.2rem' }}>
         <Card.Img
           variant="top"
           src={process.env.PUBLIC_URL + "/order-successful.jpg"}

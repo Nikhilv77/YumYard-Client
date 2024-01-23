@@ -15,7 +15,7 @@ export default function OrderFailed() {
 
   return (
     <div className="text-center">
-       <Card style={{ width: "500px", margin: "30px auto", fontFamily: "'Tinos', serif",fontSize:'1.2rem' }}>
+       <Card style={{ maxWidth: "500px", margin: "30px auto", fontFamily: "'Tinos', serif",fontSize:'1.2rem' }}>
         <Card.Img
           variant="top"
           style={{height:'400px'}}
