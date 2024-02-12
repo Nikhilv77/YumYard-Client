@@ -26,11 +26,11 @@ Yumyard is a full-stack web application designed for food ordering and restauran
 
 To run the Yumyard project locally, follow these steps:
 
-1. Clone the repository: `git clone https://github.com/your-username/yumyard.git`
+1. Clone the repository: `git clone https://github.com/Nikhilv77/YumYard-Client`
 2. Navigate to the project directory: `cd yumyard`
 3. Install dependencies: `npm install`
 4. Start the server: `npm start`
-5. Access the application at [http://localhost:3000](http://localhost:3000)
+5. Access the application at (http://localhost:3000)
 
 ## Contributing
 
