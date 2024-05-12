@@ -82,7 +82,7 @@ const SignupPage = () => {
     };
     setIsLoading(true);
     try {
-      const response = await axios.post("https://yumyard-server.onrender.com/api/users/doesnotexist", user);
+      const response = await axios.post("https://yumyard-server-jq26.onrender.com/api/users/doesnotexist", user);
       setIsLoading(false);
       navigate("/signupAuth", { state: user });
     } catch (error) {

@@ -30,7 +30,7 @@ const ForgetPasswordPage = () => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (emailRegex.test(email)) {
       try {
-        const response = await axios.post("https://yumyard-server.onrender.com/api/users/doesexist", { email });
+        const response = await axios.post("https://yumyard-server-jq26.onrender.com/api/users/doesexist", { email });
         setLoginInfo(response.data);
         setEmailIsValid(true);
         setOtpSent(true);
