@@ -28,7 +28,7 @@ const SignupAuthentication = () => {
 
   const validateEmailAndDispatchAction = async () => {
     try {
-      const response = await axios.post("https://yumyard-server-jq26.onrender.com/api/users/doesnotexist", { email });
+      const response = await axios.post("https://yumyard-server-erfw.onrender.com/api/users/doesnotexist", { email });
       setOtpSent(true);
       setShowOTPInput(true);
       const oneTimePassword = Math.floor(Math.random() * 9000 + 1000);

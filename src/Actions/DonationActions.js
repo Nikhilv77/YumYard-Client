@@ -7,7 +7,7 @@ export const donationAction = (body) => async (dispatch) => {
  `${process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY}`
   );
   try {
-    const response = await axios.post('https://yumyard-server-jq26.onrender.com/api/donation/donate',body);
+    const response = await axios.post('https://yumyard-server-erfw.onrender.com/api/donation/donate',body);
     dispatch({type:'DONATION_SUCCESSFUL'});
     const sessionId = response.data.id;
     if(sessionId){
@@ -24,7 +24,7 @@ export const donationAction = (body) => async (dispatch) => {
 export const getAllDonations = ()=>async(dispatch)=>{
   dispatch({type:'GET_ALL_DONATIONS_REQUEST'});
   try{
-  const response = await axios.get('https://yumyard-server-jq26.onrender.com/api/donation/getalldonations');
+  const response = await axios.get('https://yumyard-server-erfw.onrender.com/api/donation/getalldonations');
   dispatch({type:'GET_ALL_DONATIONS_SUCCESS',payload:response.data})
   }catch(error){
   dispatch({type:'GET_ALL_DONATIONS_FAILED',payload:error})
@@ -35,7 +35,7 @@ export const getAllDonations = ()=>async(dispatch)=>{
 export const saveThroughSessionDonation = (transactionId)=>async(dispatch)=>{
   dispatch({type:'SAVE_DONATION_REQUEST'});
   try {
-    const response = await axios.post('https://yumyard-server-jq26.onrender.com/api/session-donations/findByIdAndSaveDonation',{transactionId})
+    const response = await axios.post('https://yumyard-server-erfw.onrender.com/api/session-donations/findByIdAndSaveDonation',{transactionId})
     dispatch({type:'SAVE_DONATION_SUCCESSFUL'})
   } catch (error) {
     dispatch({type:'SAVE_DONATION_FAILED'})
@@ -46,7 +46,7 @@ export const downloadDonationReceiptAction = (transactionId) => async (dispatch)
   dispatch({ type: 'DOWNLOAD_DONATIONRECEIPT_REQUEST' });
 
   try {
-    const response = await axios.post('https://yumyard-server-jq26.onrender.com/api/session-donations/downloaddonationreceipt', { transactionId });
+    const response = await axios.post('https://yumyard-server-erfw.onrender.com/api/session-donations/downloaddonationreceipt', { transactionId });
     dispatch({ type: 'DOWNLOAD_DONATIONRECEIPT_SUCCESSFUL', payload: response.data });
    
     return response.data.receipt.data; 
