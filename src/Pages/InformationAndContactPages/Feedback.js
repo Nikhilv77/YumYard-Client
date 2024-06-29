@@ -40,7 +40,7 @@ const FeedbackForm = () => {
     }
     let data;
     try {
-      const response = await axios.post('https://yumyard-server-erfw.onrender.com/api/users/doesfeedbackexist',{value});
+      const response = await axios.post('https://yumyard-server-jq26.onrender.com/api/users/doesfeedbackexist',{value});
       data = {...value,isCustomer:true}
      
       dispatch(submitFeedbackActions(data))
