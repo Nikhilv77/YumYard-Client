@@ -71,7 +71,7 @@ const LoginPage = () => {
                 style={{fontSize:'1.2rem'}}
                 required
                   type="text"
-                  placeholder="Enter email or Mobile number"
+                  placeholder="Email - nv581339@gmail.com"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                 />
@@ -82,7 +82,7 @@ const LoginPage = () => {
                 style={{fontSize:'1.2rem'}}
                 required
                   type="password"
-                  placeholder="Password"
+                  placeholder="password - 123456"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                 />
